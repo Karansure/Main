@@ -1,4 +1,4 @@
-import random
+import secrets
 import pyperclip
 
 uppercase="ABCDEFGHIKLMNOPQRSTUVXYZ"
@@ -9,7 +9,7 @@ sp_charcters='@#$^&*'
 total=uppercase+lowercase+str(number)+sp_charcters
 input=int(input("enter a number :"))
 
-tot="".join(random.choice(total) for x in range(input))
+tot="".join(secrets.choice(total) for x in range(input))
 pyperclip.copy(tot)
 
 print(tot)
